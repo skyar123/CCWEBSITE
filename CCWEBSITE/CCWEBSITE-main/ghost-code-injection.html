@@ -1,0 +1,352 @@
+<!--
+  ============================================================
+  Ghost Code Injection — ConnectEd Circles
+  ============================================================
+  Paste the STYLE block into:  Ghost Admin → Settings → Code injection → Site Header
+  Paste the SCRIPT block into: Ghost Admin → Settings → Code injection → Site Footer
+  ============================================================
+-->
+
+
+<!-- ===================== SITE HEADER ===================== -->
+
+<style>
+/* ── Fonts ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+/* ── Root palette ──────────────────────────────────────── */
+:root {
+  --cc-sage-900: #3a5a4a;  --cc-sage-800: #4a6e5c;
+  --cc-sage-700: #5d8a72;  --cc-sage-600: #6f9e84;
+  --cc-sage-400: #9cc4ab;  --cc-sage-300: #b8d6c3;
+  --cc-sage-200: #d4e8dc;  --cc-sage-100: #e9f3ed;
+  --cc-sage-50:  #f3f9f5;
+  --cc-terra-700: #a8522a; --cc-terra-600: #c06030;
+  --cc-terra-500: #d17a4a; --cc-terra-100: #fbeede;
+  --cc-lav-700: #6b5b8a;   --cc-lav-100: #eee9f5;
+  --cc-neutral-900: #1a1a1a; --cc-neutral-800: #2d2d2d;
+  --cc-neutral-600: #555555; --cc-neutral-500: #737373;
+  --cc-neutral-400: #a0a0a0; --cc-neutral-200: #e0e0e0;
+  --cc-cream: #faf8f4;      --cc-white: #fefdfb;
+}
+
+/* ── Global overrides ──────────────────────────────────── */
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif !important;
+  background: var(--cc-cream) !important;
+  color: var(--cc-neutral-800) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.gh-article-title,
+.post-card-title,
+.site-title {
+  font-family: 'Fraunces', Georgia, serif !important;
+  color: var(--cc-neutral-900) !important;
+  font-weight: 600 !important;
+}
+
+/* ── Links ─────────────────────────────────────────────── */
+a { color: var(--cc-sage-700); }
+a:hover { color: var(--cc-sage-900); }
+.gh-article-body a,
+.post-content a {
+  color: var(--cc-sage-700) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.gh-article-body a:hover,
+.post-content a:hover {
+  color: var(--cc-sage-800) !important;
+}
+
+/* ── Site header / nav area ────────────────────────────── */
+.gh-head,
+.site-header {
+  background: rgba(250, 248, 244, 0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+}
+.gh-head-logo,
+.site-title a {
+  font-family: 'Fraunces', Georgia, serif !important;
+  color: var(--cc-neutral-900) !important;
+  font-weight: 600 !important;
+}
+.gh-head-menu a,
+.nav a {
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-size: 0.9rem !important;
+  color: var(--cc-neutral-600) !important;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  transition: background 0.22s ease, color 0.22s ease;
+}
+.gh-head-menu a:hover,
+.nav a:hover {
+  background: var(--cc-sage-100) !important;
+  color: var(--cc-sage-800) !important;
+}
+
+/* ── Post cards (index/tag pages) ──────────────────────── */
+.post-card,
+.gh-card {
+  background: var(--cc-white) !important;
+  border: 1px solid rgba(0,0,0,0.04) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+.post-card:hover,
+.gh-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07) !important;
+  transform: translateY(-3px);
+}
+.post-card-image,
+.gh-card-image {
+  border-radius: 16px 16px 0 0 !important;
+}
+.post-card-content-link,
+.gh-card-link {
+  text-decoration: none !important;
+}
+.post-card-excerpt,
+.gh-card-excerpt {
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+  color: var(--cc-neutral-500) !important;
+  font-size: 0.9rem !important;
+}
+.post-card-meta .post-card-primary-tag,
+.gh-card-tag {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: var(--cc-sage-100) !important;
+  color: var(--cc-sage-700) !important;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+/* ── Single post article ───────────────────────────────── */
+.gh-article,
+.post-template .post-content,
+.gh-content {
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+.gh-article-body p,
+.post-content p,
+.gh-content p {
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+  color: var(--cc-neutral-600) !important;
+}
+.gh-article-body blockquote,
+.post-content blockquote {
+  border-left: 3px solid var(--cc-sage-400) !important;
+  background: var(--cc-sage-50) !important;
+  border-radius: 0 10px 10px 0 !important;
+  padding: 16px 24px !important;
+  margin: 28px 0 !important;
+}
+.gh-article-body blockquote p {
+  font-style: italic !important;
+  color: var(--cc-neutral-500) !important;
+}
+.gh-article-body img,
+.post-content img,
+.gh-content img {
+  border-radius: 12px !important;
+}
+.gh-article-body figure figcaption,
+.post-content figcaption {
+  font-size: 0.82rem !important;
+  color: var(--cc-neutral-400) !important;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ── Feature image ─────────────────────────────────────── */
+.gh-article-image img,
+.post-feature-image img {
+  border-radius: 16px !important;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+/* ── Author card ───────────────────────────────────────── */
+.gh-author-image,
+.author-profile-image {
+  border-radius: 50% !important;
+}
+.gh-article-meta {
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  color: var(--cc-neutral-400) !important;
+}
+
+/* ── Koenig card styling ───────────────────────────────── */
+.kg-callout-card {
+  background: var(--cc-sage-50) !important;
+  border-left: 3px solid var(--cc-sage-400) !important;
+  border-radius: 0 12px 12px 0 !important;
+}
+.kg-image-card img {
+  border-radius: 12px !important;
+}
+.kg-button-card .kg-btn,
+.kg-button-card a {
+  background: var(--cc-sage-800) !important;
+  color: #fff !important;
+  border-radius: 9999px !important;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  transition: background 0.22s ease;
+}
+.kg-button-card .kg-btn:hover,
+.kg-button-card a:hover {
+  background: var(--cc-sage-900) !important;
+}
+
+/* ── Buttons (general Ghost buttons) ───────────────────── */
+.gh-btn,
+button[data-portal],
+[data-portal] button {
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  transition: all 0.22s ease;
+}
+.gh-btn-accent,
+.gh-portal-btn-main {
+  background: var(--cc-terra-500) !important;
+  color: #fff !important;
+}
+.gh-btn-accent:hover,
+.gh-portal-btn-main:hover {
+  background: var(--cc-terra-600) !important;
+}
+
+/* ── Ghost Portal popup (signup/signin modals) ─────────── */
+.gh-portal-popup-wrapper {
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+.gh-portal-popup-container {
+  border-radius: 20px !important;
+  background: var(--cc-white) !important;
+}
+.gh-portal-popup-container h1,
+.gh-portal-popup-container h2 {
+  font-family: 'Fraunces', Georgia, serif !important;
+}
+.gh-portal-btn-main,
+.gh-portal-btn[class*="primary"] {
+  background: var(--cc-terra-500) !important;
+  border-radius: 9999px !important;
+}
+.gh-portal-btn-main:hover {
+  background: var(--cc-terra-600) !important;
+}
+.gh-portal-input {
+  border-radius: 10px !important;
+  border: 1.5px solid var(--cc-neutral-200) !important;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+.gh-portal-input:focus {
+  border-color: var(--cc-sage-400) !important;
+  box-shadow: 0 0 0 3px var(--cc-sage-100) !important;
+}
+
+/* ── Hide Ghost's floating portal button ───────────────── */
+.gh-portal-triggerbtn-wrapper {
+  display: none !important;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+.gh-foot,
+.site-footer {
+  background: var(--cc-neutral-900) !important;
+  color: rgba(255,255,255,0.7) !important;
+}
+.gh-foot a,
+.site-footer a {
+  color: rgba(255,255,255,0.55) !important;
+}
+.gh-foot a:hover,
+.site-footer a:hover {
+  color: var(--cc-sage-300) !important;
+}
+
+/* ── Members-only badge ────────────────────────────────── */
+.post-card .members-label,
+.gh-post-upgrade-cta {
+  background: var(--cc-terra-100) !important;
+  color: var(--cc-terra-700) !important;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+}
+
+/* ── Signup/Subscribe forms within posts ───────────────── */
+.gh-post-upgrade-cta,
+.subscription-form {
+  background: var(--cc-sage-50) !important;
+  border: 1px solid var(--cc-sage-200) !important;
+  border-radius: 16px !important;
+  padding: 40px 32px !important;
+}
+
+/* ── Pagination ────────────────────────────────────────── */
+.pagination a,
+.gh-pagination a {
+  background: var(--cc-sage-100) !important;
+  color: var(--cc-sage-800) !important;
+  border-radius: 9999px !important;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: background 0.22s ease;
+}
+.pagination a:hover,
+.gh-pagination a:hover {
+  background: var(--cc-sage-200) !important;
+}
+
+/* ── Subtle warm touches ───────────────────────────────── */
+hr {
+  border: none !important;
+  border-top: 1px solid var(--cc-neutral-200) !important;
+}
+::selection {
+  background: var(--cc-sage-200);
+  color: var(--cc-sage-900);
+}
+</style>
+
+
+<!-- ===================== SITE FOOTER ===================== -->
+<!--
+  Paste everything below this line into:
+  Ghost Admin → Settings → Code injection → Site Footer
+-->
+
+<script>
+/* Redirect visitors from Ghost blog index back to your main site blog page */
+(function() {
+  var loc = window.location;
+  var isIndex = loc.pathname === '/' || loc.pathname === '/blog/';
+  var isTag = loc.pathname.indexOf('/tag/') === 0;
+
+  /* If someone lands on the Ghost homepage or /blog/, send them to your Netlify blog */
+  if (isIndex || isTag) {
+    window.location.replace('https://www.connectedcirclescommunity.com/blog.html');
+    return;
+  }
+})();
+</script>

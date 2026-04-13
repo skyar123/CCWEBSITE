@@ -1,0 +1,91 @@
+{{!< default}}
+
+<section class="page-hero" id="main-content">
+  <div class="container">
+    <span class="overline">Field Notes</span>
+    <h1>Reflections from practice</h1>
+    <p>Clinical thinking, practical tools, and honest writing from the ConnectEd Circles team.</p>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container">
+
+    {{! Featured post — shown if any post is marked featured }}
+    {{#has tag="hash-featured"}}{{else}}
+    {{#get "posts" filter="featured:true" limit="1"}}
+      {{#foreach posts}}
+      <div class="featured-post anim">
+        {{#if feature_image}}
+        <a href="{{url}}" class="featured-post-img">
+          <img src="{{img_url feature_image size="l"}}" alt="{{title}}" loading="eager">
+        </a>
+        {{/if}}
+        <div class="featured-post-body">
+          <span class="post-tag featured-label">Featured</span>
+          {{#primary_tag}}<span class="post-tag">{{name}}</span>{{/primary_tag}}
+          <h2><a href="{{url}}">{{title}}</a></h2>
+          <p>{{excerpt words="35"}}</p>
+          <div class="post-meta-row">
+            <span>{{date published_at format="MMMM D, YYYY"}}</span>
+            <span>&middot;</span>
+            <span>{{reading_time}}</span>
+          </div>
+          <a href="{{url}}" class="btn btn-primary btn-sm">Read more <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+      {{/foreach}}
+    {{/get}}
+    {{/has}}
+
+    <div class="posts-grid">
+      {{#foreach posts}}
+      <article class="post-card anim{{#if @index}} anim-d{{@index}}{{/if}}">
+        {{#if feature_image}}
+        <a href="{{url}}" class="post-card-img-wrap">
+          <img src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy">
+        </a>
+        {{/if}}
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            {{#primary_tag}}<span class="post-tag">{{name}}</span>{{/primary_tag}}
+            <span class="post-date">{{date published_at format="MMM D, YYYY"}}</span>
+          </div>
+          <h3><a href="{{url}}">{{title}}</a></h3>
+          <p>{{excerpt words="28"}}</p>
+          {{#if @member}}
+            <a href="{{url}}" class="read-link">Read more <span class="arrow">&rarr;</span></a>
+          {{else}}
+            {{#if visibility}}
+              {{#is visibility "members"}}
+                <a href="#" class="read-link members-only" data-portal="signup">Members only &mdash; join free <span class="arrow">&rarr;</span></a>
+              {{else}}
+                <a href="{{url}}" class="read-link">Read more <span class="arrow">&rarr;</span></a>
+              {{/is}}
+            {{else}}
+              <a href="{{url}}" class="read-link">Read more <span class="arrow">&rarr;</span></a>
+            {{/if}}
+          {{/if}}
+        </div>
+      </article>
+      {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+  </div>
+</section>
+
+<section class="section section-sage newsletter-section">
+  <div class="container" style="max-width:600px; text-align:center;">
+    <span class="overline">Stay Connected</span>
+    <h2>Get Field Notes in your inbox</h2>
+    <p>Clinical reflections, practical tools, and honest thinking - biweekly, free.</p>
+    {{#unless @member}}
+    <a href="#" class="btn btn-primary" data-portal="signup">Subscribe free <span class="arrow">&rarr;</span></a>
+    <p class="newsletter-note">No spam. Unsubscribe any time.</p>
+    {{else}}
+    <p style="color:var(--sage-700); font-weight:600;">You're subscribed. Thank you.</p>
+    {{/unless}}
+  </div>
+</section>

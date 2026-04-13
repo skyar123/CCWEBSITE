@@ -1,0 +1,124 @@
+{{!< default}}
+
+<article id="main-content" class="{{post_class}}">
+
+  <header class="post-header page-hero">
+    <div class="container" style="text-align:center; max-width:760px;">
+      {{#primary_tag}}<span class="overline">{{name}}</span>{{/primary_tag}}
+      <h1>{{title}}</h1>
+      <div class="post-meta-row" style="justify-content:center; margin-top:16px;">
+        {{#if author.profile_image}}
+        <img src="{{author.profile_image}}" alt="{{author.name}}" class="author-thumb">
+        {{/if}}
+        <span>{{author.name}}</span>
+        <span>&middot;</span>
+        <span>{{date published_at format="MMMM D, YYYY"}}</span>
+        <span>&middot;</span>
+        <span>{{reading_time}}</span>
+      </div>
+    </div>
+  </header>
+
+  {{#if feature_image}}
+  <div class="post-feature-img">
+    <img src="{{img_url feature_image size="xl"}}" alt="{{title}}"
+         {{#if feature_image_caption}}title="{{feature_image_caption}}"{{/if}}>
+    {{#if feature_image_caption}}<p class="post-img-caption">{{feature_image_caption}}</p>{{/if}}
+  </div>
+  {{/if}}
+
+  <section class="section post-content-section">
+    <div class="container post-body">
+
+      {{#if @member}}
+        {{content}}
+      {{else}}
+        {{#is visibility "members"}}
+        {{content}}
+        <div class="post-gate">
+          <h4>This post is for subscribers</h4>
+          <p>Join free to read the full article and get new posts delivered to your inbox.</p>
+          <a href="#" class="btn btn-primary" data-portal="signup">Subscribe free <span class="arrow">&rarr;</span></a>
+          <p style="font-size:0.78rem; color:var(--neutral-400); margin-top:10px;">Already a member? <a href="#" data-portal="signin" style="color:var(--sage-700);">Sign in</a></p>
+        </div>
+        {{else}}
+          {{content}}
+        {{/is}}
+      {{/if}}
+
+    </div>
+  </section>
+
+  {{#if tags}}
+  <div class="container post-body" style="padding-top:0; padding-bottom:32px;">
+    <div class="post-tags-row">
+      {{#foreach tags}}
+      <a href="{{url}}" class="tag">{{name}}</a>
+      {{/foreach}}
+    </div>
+  </div>
+  {{/if}}
+
+</article>
+
+{{! Author card }}
+<section class="section section-sage" style="padding:48px 0;">
+  <div class="container" style="max-width:760px;">
+    <div class="author-card">
+      {{#if author.profile_image}}
+      <img src="{{author.profile_image}}" alt="{{author.name}}" class="author-card-photo">
+      {{/if}}
+      <div>
+        <p class="author-card-label">Written by</p>
+        <h3>{{author.name}}</h3>
+        {{#if author.bio}}<p class="author-card-bio">{{author.bio}}</p>{{/if}}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{! Subscribe CTA }}
+{{#unless @member}}
+<section class="section" style="padding:56px 0; text-align:center;">
+  <div class="container" style="max-width:560px;">
+    <span class="overline">Keep Reading</span>
+    <h2>Get the next Field Note</h2>
+    <p style="color:var(--neutral-500); margin-bottom:24px;">New posts delivered to your inbox, plus access to our practitioner resource library.</p>
+    <a href="#" class="btn btn-primary" data-portal="signup">Subscribe free <span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+{{/unless}}
+
+{{! Related posts }}
+{{#get "posts" filter="tags:[{{primary_tag.slug}}]+id:-{{id}}" limit="3"}}
+{{#if posts}}
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Keep Reading</span>
+      <h2>More from Field Notes</h2>
+    </div>
+    <div class="posts-grid">
+      {{#foreach posts}}
+      <article class="post-card anim">
+        {{#if feature_image}}
+        <a href="{{url}}" class="post-card-img-wrap">
+          <img src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy">
+        </a>
+        {{/if}}
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            {{#primary_tag}}<span class="post-tag">{{name}}</span>{{/primary_tag}}
+            <span class="post-date">{{date published_at format="MMM D, YYYY"}}</span>
+          </div>
+          <h3><a href="{{url}}">{{title}}</a></h3>
+          <p>{{excerpt words="20"}}</p>
+          <a href="{{url}}" class="read-link">Read more <span class="arrow">&rarr;</span></a>
+        </div>
+      </article>
+      {{/foreach}}
+    </div>
+  </div>
+</section>
+{{/if}}
+{{/get}}

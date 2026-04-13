@@ -1,0 +1,16 @@
+{
+  "name": "connected-circles",
+  "description": "ConnectEd Circles Field Notes — matching theme for connectedcirclescommunity.com",
+  "version": "1.0.0",
+  "engines": { "ghost": ">=5.0.0" },
+  "license": "MIT",
+  "config": {
+    "posts_per_page": 12,
+    "image_sizes": {
+      "s":  { "width": 400 },
+      "m":  { "width": 800 },
+      "l":  { "width": 1200 },
+      "xl": { "width": 2000 }
+    }
+  }
+}

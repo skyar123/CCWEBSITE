@@ -1,0 +1,32 @@
+{{!< default}}
+<section class="page-hero" id="main-content">
+  <div class="container">
+    <span class="overline">Topic</span>
+    <h1>{{tag.name}}</h1>
+    {{#if tag.description}}<p>{{tag.description}}</p>{{/if}}
+  </div>
+</section>
+<section class="section section-white">
+  <div class="container">
+    <div class="posts-grid">
+      {{#foreach posts}}
+      <article class="post-card anim">
+        {{#if feature_image}}
+        <a href="{{url}}" class="post-card-img-wrap">
+          <img src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy">
+        </a>
+        {{/if}}
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-date">{{date published_at format="MMM D, YYYY"}}</span>
+          </div>
+          <h3><a href="{{url}}">{{title}}</a></h3>
+          <p>{{excerpt words="25"}}</p>
+          <a href="{{url}}" class="read-link">Read more <span class="arrow">&rarr;</span></a>
+        </div>
+      </article>
+      {{/foreach}}
+    </div>
+    {{pagination}}
+  </div>
+</section>

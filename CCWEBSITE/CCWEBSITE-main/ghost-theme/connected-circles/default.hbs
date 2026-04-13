@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{meta_title}}</title>
+  {{#if meta_description}}<meta name="description" content="{{meta_description}}">{{/if}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+  <link rel="icon" href="https://www.connectedcirclescommunity.com/images/logo.svg" type="image/svg+xml">
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <a href="https://www.connectedcirclescommunity.com" class="nav-logo">
+      <img src="https://www.connectedcirclescommunity.com/images/logo.svg" alt="ConnectEd Circles logo" width="64" height="64">
+      <span class="nav-logo-text">Connect<span>Ed</span> Circles</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="https://www.connectedcirclescommunity.com">Home</a></li>
+      <li><a href="https://www.connectedcirclescommunity.com/about.html">About</a></li>
+      <li><a href="https://www.connectedcirclescommunity.com/services.html">Services</a></li>
+      <li><a href="https://www.connectedcirclescommunity.com/resources.html">Resources</a></li>
+      <li><a href="{{@site.url}}" class="active">Field Notes</a></li>
+      <li><a href="https://www.connectedcirclescommunity.com/es/index.html" class="nav-lang">Español</a></li>
+      <li><a href="https://www.connectedcirclescommunity.com/contact.html" class="btn-nav-cta">Book a Consultation</a></li>
+    </ul>
+  </div>
+</nav>
+
+{{{body}}}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Connect<span>Ed</span> Circles</div>
+        <p class="footer-desc">Reflective coaching, professional development, and family support grounded in relationships. Serving Western North Carolina.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.connectedcirclescommunity.com/about.html">About Us</a></li>
+          <li><a href="https://www.connectedcirclescommunity.com/team.html">Meet the Team</a></li>
+          <li><a href="{{@site.url}}">Field Notes</a></li>
+          <li><a href="https://www.connectedcirclescommunity.com/community.html">Join the Circle</a></li>
+          <li><a href="https://www.connectedcirclescommunity.com/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.connectedcirclescommunity.com/workshops.html">Workshops</a></li>
+          <li><a href="https://www.connectedcirclescommunity.com/services.html">Services</a></li>
+          <li><a href="https://www.connectedcirclescommunity.com/frameworks.html">Our Frameworks</a></li>
+          <li><a href="https://www.connectedcirclescommunity.com/resources.html">Resource Library</a></li>
+          <li><a href="https://www.connectedcirclescommunity.com/directory.html">WNC Directory</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/connectedcirclescommunity" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:info@connectedcirclescommunity.com">Email Us</a></li>
+          <li><a href="#" data-portal="signup">Join the Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{date format="YYYY"}} ConnectEd Circles, LLC.</p>
+      <p>Asheville, NC</p>
+    </div>
+  </div>
+</footer>
+
+<script src="{{asset "js/main.js"}}"></script>
+{{ghost_foot}}
+</body>
+</html>

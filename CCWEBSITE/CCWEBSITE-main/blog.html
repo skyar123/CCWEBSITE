@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Notes | ConnectEd Circles</title>
+  <meta name="description" content="Thought leadership, clinical reflections, and practical tools from the ConnectEd Circles team. Early childhood development, attachment, neurodiversity, and emotionally responsive practice.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <style>
+    .post-card { background:var(--white); border-radius:var(--r-lg); box-shadow:var(--shadow-sm); border:1px solid rgba(0,0,0,0.04); overflow:hidden; transition:all var(--dur) var(--ease); display:flex; flex-direction:column; }
+    .post-card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
+    .post-thumb { height:160px; background:var(--sage-100); flex-shrink:0; overflow:hidden; }
+    .post-thumb img { width:100%; height:100%; object-fit:cover; }
+    .post-thumb.pt-terra { background:var(--terra-100); }
+    .post-thumb.pt-lav { background:var(--lav-100); }
+    .post-body { padding:24px; flex:1; display:flex; flex-direction:column; }
+    .post-meta { font-size:0.78rem; color:var(--neutral-400); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:8px; }
+    .post-body h3 { font-size:1.05rem; margin:0 0 10px; line-height:1.35; }
+    .post-body p { font-size:0.88rem; color:var(--neutral-500); flex:1; margin:0 0 16px; }
+    .post-body a.read-link { font-size:0.85rem; font-weight:700; color:var(--sage-700); text-decoration:none; }
+    .post-body a.read-link:hover { color:var(--sage-900); }
+    .post-access { display:inline-block; font-size:0.68rem; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; border-radius:9999px; padding:3px 10px; margin-bottom:10px; }
+    .post-access.pa-free { background:var(--sage-100); color:var(--sage-700); }
+    .post-access.pa-member { background:var(--terra-100); color:var(--terra-700); }
+    .subscribe-box { background:var(--sage-800); color:var(--white); border-radius:var(--r-xl); padding:56px 48px; text-align:center; }
+    .subscribe-box h2 { color:var(--white); margin-bottom:12px; }
+    .subscribe-box p { color:var(--sage-200); max-width:520px; margin:0 auto 32px; }
+    .subscribe-form { display:flex; gap:12px; max-width:480px; margin:0 auto; }
+    .subscribe-form input { flex:1; padding:14px 18px; border-radius:var(--r-md); border:none; font-size:0.95rem; background:rgba(255,255,255,0.12); color:var(--white); outline:none; }
+    .subscribe-form input::placeholder { color:rgba(255,255,255,0.5); }
+    .subscribe-form input:focus { background:rgba(255,255,255,0.2); }
+    .subscribe-form button { padding:14px 24px; border-radius:var(--r-md); border:none; background:var(--terra-500); color:var(--white); font-size:0.9rem; font-weight:700; cursor:pointer; white-space:nowrap; transition:background var(--dur) var(--ease); }
+    .subscribe-form button:hover { background:var(--terra-600); }
+    .subscribe-note { font-size:0.78rem; color:var(--sage-300); margin-top:16px; }
+    @media (max-width:600px) { .subscribe-box { padding:40px 24px; } .subscribe-form { flex-direction:column; } .subscribe-form button { width:100%; } }
+  </style>
+  <meta property="og:image" content="https://www.connectedcirclescommunity.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main"><div class="nav-inner"><a href="index.html" class="nav-logo"><img src="images/logo.svg" alt="ConnectEd Circles logo"><span class="nav-logo-text">Connect<span>Ed</span> Circles</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="blog.html">Field Notes</a></li><li><a href="es/index.html" class="nav-lang">Español</a></li><li><a href="contact.html" class="btn btn-nav-cta">Book a Consultation</a></li></ul></div></nav>
+
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <span class="overline">Field Notes</span>
+      <h1>From the ConnectEd Circles Team</h1>
+      <p>Clinical reflections, practical tools, and honest thinking on early childhood development, attachment, and neurodiversity-affirming practice.</p>
+    </div>
+  </section>
+
+  <!-- Posts grid — dynamically loaded from Ghost -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="overline">Latest</span>
+        <h2>Recent posts</h2>
+      </div>
+      <div class="grid-3" id="ghost-posts">
+        <div class="post-card" style="opacity:0.5;text-align:center;padding:60px 24px;grid-column:1/-1;">
+          <p style="color:var(--neutral-400);">Loading posts...</p>
+        </div>
+      </div>
+
+      <!-- Ghost API posts load here -->
+      <div class="section-header" id="ghost-section-header" style="margin-top:64px;display:none;">
+        <span class="overline">From Ghost</span>
+        <h2>More from Field Notes</h2>
+      </div>
+      <div class="grid-3" id="ghost-posts-grid"></div>
+
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    var API = 'https://connected-circles.ghost.io/ghost/api/content/posts/';
+    var KEY = '173c2ca8bce5d07e1c0d5998a2';
+    var grid = document.getElementById('ghost-posts');
+
+    fetch(API + '?key=' + KEY + '&limit=12&include=tags,authors&fields=title,custom_excerpt,excerpt,url,published_at,feature_image,visibility&include=authors,tags')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (!data.posts || !data.posts.length) {
+          grid.innerHTML = '<div style="text-align:center;padding:60px 24px;grid-column:1/-1;"><p style="color:var(--neutral-500);">No posts yet. Check back soon!</p></div>';
+          return;
+        }
+        grid.innerHTML = '';
+        var delays = ['', ' anim-d1', ' anim-d2'];
+        data.posts.forEach(function (post, i) {
+          var date = new Date(post.published_at);
+          var month = date.toLocaleString('en-US', { month: 'long', year: 'numeric' });
+          var author = post.authors && post.authors[0] ? post.authors[0].name : 'ConnectEd Circles';
+          var tag = post.tags && post.tags[0] ? post.tags[0].name : '';
+          var excerpt = post.custom_excerpt || post.excerpt || '';
+          if (excerpt.length > 180) excerpt = excerpt.substring(0, 177) + '...';
+          var isFree = post.visibility === 'public';
+          var thumb = post.feature_image
+            ? '<div class="post-thumb"><img src="' + post.feature_image + '" alt="' + post.title.replace(/"/g, '&quot;') + '" loading="lazy"></div>'
+            : '<div class="post-thumb"></div>';
+          var accessClass = isFree ? 'pa-free' : 'pa-member';
+          var accessLabel = isFree ? 'Free' : 'Members';
+
+          var card = document.createElement('div');
+          card.className = 'post-card anim' + delays[i % 3];
+          card.innerHTML = thumb +
+            '<div class="post-body">' +
+              '<span class="post-access ' + accessClass + '">' + accessLabel + '</span>' +
+              (tag ? '<span class="post-access" style="background:var(--neutral-100);color:var(--neutral-500);margin-left:6px;">' + tag + '</span>' : '') +
+              '<div class="post-meta">' + author + ' &middot; ' + month + '</div>' +
+              '<h3>' + post.title + '</h3>' +
+              '<p>' + excerpt + '</p>' +
+              '<a href="' + post.url + '" class="read-link">Read on Field Notes <span class="arrow">&rarr;</span></a>' +
+            '</div>';
+          grid.appendChild(card);
+        });
+
+        // trigger scroll animations for the new cards
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+          }, { threshold: 0.1 });
+          grid.querySelectorAll('.anim').forEach(function (el) {
+            var r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight) el.classList.add('visible');
+            else observer.observe(el);
+          });
+        } else {
+          grid.querySelectorAll('.anim').forEach(function (el) { el.classList.add('visible'); });
+        }
+      })
+      .catch(function () {
+        grid.innerHTML = '<div style="text-align:center;padding:60px 24px;grid-column:1/-1;">' +
+          '<p style="color:var(--neutral-500);margin-bottom:16px;">Could not load posts right now.</p>' +
+          '<a href="https://connected-circles.ghost.io" class="btn btn-outline" target="_blank" rel="noopener">Visit Field Notes directly &rarr;</a></div>';
+      });
+  })();
+  </script>
+
+  <!-- Mailing List -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <div class="subscribe-box anim">
+        <span class="overline" style="color:var(--sage-300);">Join the Circle  -  Free</span>
+        <h2>Become a Circle Member</h2>
+        <p>Free subscribers get access to our full resource library: 25+ clinical guides, family handouts, and practitioner tools  -  delivered to your inbox. Plus monthly Field Notes and early access to trainings.</p>
+        <form action="https://connected-circles.ghost.io/subscribe" method="POST">
+          <div class="subscribe-form">
+            <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address">
+            <button type="submit">Join Free &rarr;</button>
+          </div>
+        </form>
+        <p class="subscribe-note">We never share your email. Unsubscribe any time. &nbsp;&bull;&nbsp; <a href="subscribe.html" style="color:var(--sage-300);">Dedicated subscribe page &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topics -->
+  <section class="section section-sage">
+    <div class="container">
+      <div class="section-header">
+        <span class="overline">Browse by Topic</span>
+        <h2>What we write about</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card anim">
+          <div class="card-icon card-icon-sage">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3>Attachment &amp; Relationships</h3>
+          <p>Circle of Security, secure base concepts, rupture and repair, and how the quality of adult relationships shapes children&rsquo;s developing brains.</p>
+        </div>
+        <div class="card anim anim-d1">
+          <div class="card-icon card-icon-lav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>Neurodiversity &amp; Autism</h3>
+          <p>Strengths-based perspectives on autistic experience, TEACCH methods, DIR/Floortime, identity-first language, and supporting neurodivergent children in classrooms and at home.</p>
+        </div>
+        <div class="card anim anim-d2">
+          <div class="card-icon card-icon-terra">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <h3>Reflective Practice</h3>
+          <p>What it means to be a reflective practitioner, how reflective supervision works, and why the parallel process matters for everyone in a child&rsquo;s care system.</p>
+        </div>
+        <div class="card anim">
+          <div class="card-icon card-icon-sage">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Families &amp; Caregivers</h3>
+          <p>Practical tools and honest conversation for parents and caregivers navigating diagnosis, IEP processes, school systems, and the emotional labor of raising young children.</p>
+        </div>
+        <div class="card anim anim-d1">
+          <div class="card-icon card-icon-lav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Community &amp; Equity</h3>
+          <p>Anti-racist practice, decolonizing infant mental health, supporting bilingual families, and what community resilience actually looks like in Western North Carolina.</p>
+        </div>
+        <div class="card anim anim-d2">
+          <div class="card-icon card-icon-terra">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Research &amp; Evidence</h3>
+          <p>Making sense of early childhood research for practitioners: what the studies actually say, what they don&rsquo;t, and how to translate findings into daily practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta"><div class="container"><h2>Want to write for us?</h2><p>We welcome guest posts from early childhood practitioners, family support workers, and researchers working in our communities. Reach out to start the conversation.</p><a href="contact.html" class="btn btn-white">Get in Touch <span class="arrow">&rarr;</span></a></div></section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand">Connect<span>Ed</span> Circles</div><p class="footer-desc">Reflective coaching, professional development, and family support grounded in relationships.</p></div><div><h4>Navigate</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="blog.html">Field Notes Blog</a></li><li><a href="community.html">Join the Circle</a></li><li><a href="contact.html">Contact Us</a></li></ul></div><div><h4>Explore</h4><ul class="footer-links"><li><a href="workshops.html">Workshops</a></li><li><a href="services.html">Services</a></li><li><a href="frameworks.html">Our Frameworks</a></li><li><a href="resources.html">Resource Library</a></li><li><a href="training.html">Autism Training</a></li><li><a href="directory.html">WNC Directory</a></li><li><a href="es/index.html">Español</a></li></ul></div><div><h4>Connect</h4><ul class="footer-links"><li><a href="https://www.instagram.com/connectedcirclescommunity" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:info@connectedcirclescommunity.com">Email Us</a></li><li><a href="blog.html">Field Notes Blog</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 ConnectEd Circles, LLC.</p><p>Asheville, NC</p></div></div></footer>
+  <script src="js/main.js"></script>
+  <script src="js/ghost-blog.js"></script>
+</body>
+</html>
