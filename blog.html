@@ -79,7 +79,6 @@
     <div class="container">
       <div class="frame-bar">
         <span>Recent posts &mdash; read here or <a href="https://connectedcircles.substack.com/" target="_blank" rel="noopener">open Field Notes on Substack &rarr;</a></span>
-        <a href="https://connectedcircles.substack.com/feed" target="_blank" rel="noopener">RSS feed</a>
       </div>
       <div class="grid-3" id="substack-posts">
         <div class="posts-state">Loading posts&hellip;</div>
@@ -100,7 +99,6 @@
   (function () {
     var grid = document.getElementById('substack-posts');
     var FEED = 'https://connectedcircles.substack.com/feed';
-    var API = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED);
 
     function escapeHtml(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' })[c]; }); }
 
@@ -110,10 +108,15 @@
       return tmp.textContent || tmp.innerText || '';
     }
 
-    function extractImage(html, fallback) {
-      if (!html) return fallback;
+    function extractImage(html) {
+      if (!html) return '';
       var m = html.match(/<img[^>]+src=["']([^"']+)["']/i);
-      return m ? m[1] : fallback;
+      return m ? m[1] : '';
+    }
+
+    function getText(el, tag) {
+      var node = el.getElementsByTagName(tag)[0];
+      return node ? (node.textContent || '').trim() : '';
     }
 
     function renderFallback() {
@@ -126,37 +129,41 @@
     var rendered = false;
     var timeoutId = setTimeout(function () { if (!rendered) { rendered = true; renderFallback(); } }, 6000);
 
-    fetch(API)
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-      .then(function (data) {
+    fetch(FEED)
+      .then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); })
+      .then(function (text) {
         if (rendered) return;
-        if (!data || data.status !== 'ok' || !data.items || !data.items.length) {
-          rendered = true; clearTimeout(timeoutId);
-          renderFallback();
-          return;
-        }
+        var doc = new DOMParser().parseFromString(text, 'text/xml');
+        var items = Array.from(doc.getElementsByTagName('item'));
+        if (!items.length) { rendered = true; clearTimeout(timeoutId); renderFallback(); return; }
         rendered = true; clearTimeout(timeoutId);
         grid.innerHTML = '';
-        data.items.slice(0, 12).forEach(function (item, i) {
-          var date = new Date(item.pubDate);
+        items.slice(0, 12).forEach(function (item, i) {
+          var title = getText(item, 'title');
+          var link = getText(item, 'link') || getText(item, 'guid');
+          var pubDate = getText(item, 'pubDate');
+          var description = getText(item, 'description');
+          var enclosure = item.getElementsByTagName('enclosure')[0];
+          var img = (enclosure && enclosure.getAttribute('url')) || extractImage(description);
+
+          var date = new Date(pubDate);
           var month = date.toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-          var excerpt = stripHtml(item.description).trim();
+          var excerpt = stripHtml(description).trim();
           if (excerpt.length > 180) excerpt = excerpt.substring(0, 177) + '…';
-          var enc = (item.enclosure && item.enclosure.link) ? item.enclosure.link : '';
-          var img = item.thumbnail || extractImage(item.content || item.description, '') || enc;
+
           var thumb = img
             ? '<div class="post-thumb"><img src="' + escapeHtml(img) + '" alt="" loading="lazy"></div>'
             : '';
           var delay = i % 3 === 1 ? ' anim-d1' : i % 3 === 2 ? ' anim-d2' : '';
           var card = document.createElement('a');
           card.className = 'post-card anim' + delay;
-          card.href = item.link;
+          card.href = link;
           card.target = '_blank';
           card.rel = 'noopener';
           card.innerHTML = thumb +
             '<div class="post-body">' +
               '<div class="post-meta">' + month + '</div>' +
-              '<h3>' + escapeHtml(item.title) + '</h3>' +
+              '<h3>' + escapeHtml(title) + '</h3>' +
               '<p>' + escapeHtml(excerpt) + '</p>' +
               '<span class="read-link">Read on Substack <span class="arrow">&rarr;</span></span>' +
             '</div>';
