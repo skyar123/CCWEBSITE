@@ -248,13 +248,26 @@
       (function () {
         var grid = document.getElementById('home-substack-posts');
         if (!grid) return;
-        var FEED = 'https://connectedcircles.substack.com/feed';
+        var FEED = '/api/feed';
         function escapeHtml(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' })[c]; }); }
         function stripHtml(s) { var t = document.createElement('div'); t.innerHTML = s || ''; return t.textContent || ''; }
         function extractImage(html) { if (!html) return ''; var m = html.match(/<img[^>]+src=["']([^"']+)["']/i); return m ? m[1] : ''; }
         function getText(el, tag) { var n = el.getElementsByTagName(tag)[0]; return n ? (n.textContent || '').trim() : ''; }
+        function animateIn(container) {
+          if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+              entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            container.querySelectorAll('.anim').forEach(function (el) {
+              if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+              else io.observe(el);
+            });
+          } else {
+            container.querySelectorAll('.anim').forEach(function (el) { el.classList.add('visible'); });
+          }
+        }
         function fallback() {
-          grid.innerHTML = '<div class="card anim" style="grid-column:1/-1;text-align:center;padding:32px 24px;">' +
+          grid.innerHTML = '<div class="card" style="grid-column:1/-1;text-align:center;padding:32px 24px;">' +
             '<p style="margin:0 0 14px;color:var(--neutral-500);">Field Notes is published on Substack. Head there to read the latest reflections from the team.</p>' +
             '<a href="https://connectedcircles.substack.com/" target="_blank" rel="noopener" class="btn btn-primary">Open Field Notes on Substack <span class="arrow">&rarr;</span></a></div>';
         }
@@ -294,6 +307,7 @@
               '<span style="font-size:0.85rem;font-weight:700;color:var(--sage-700);">Read on Substack <span class="arrow">&rarr;</span></span>';
             grid.appendChild(card);
           });
+          animateIn(grid);
         }).catch(function () { if (!rendered) { rendered = true; clearTimeout(timeoutId); fallback(); } });
       })();
       </script>

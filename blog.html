@@ -98,7 +98,7 @@
   <script>
   (function () {
     var grid = document.getElementById('substack-posts');
-    var FEED = 'https://connectedcircles.substack.com/feed';
+    var FEED = '/api/feed';
 
     function escapeHtml(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' })[c]; }); }
 
