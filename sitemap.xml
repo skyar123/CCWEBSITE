@@ -2,246 +2,246 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://connectedcircles.netlify.app/</loc>
+    <loc>https://connectedcirclescommunity.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/about.html</loc>
+    <loc>https://connectedcirclescommunity.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/about.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/about.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/team.html</loc>
+    <loc>https://connectedcirclescommunity.com/team.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/team.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/team.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/team.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/team.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/team.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/team.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/services.html</loc>
+    <loc>https://connectedcirclescommunity.com/services.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/services.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/services.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/services.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/workshops.html</loc>
+    <loc>https://connectedcirclescommunity.com/workshops.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/workshops.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/workshops.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/workshops.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/training.html</loc>
+    <loc>https://connectedcirclescommunity.com/training.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/training.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/training.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/training.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/training.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/training.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/bears.html</loc>
+    <loc>https://connectedcirclescommunity.com/bears.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/bears.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/bears.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/bears.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/bears.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/bears.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/bears.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/frameworks.html</loc>
+    <loc>https://connectedcirclescommunity.com/frameworks.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/frameworks.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/frameworks.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/frameworks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/frameworks.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/frameworks.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/frameworks.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/resources.html</loc>
+    <loc>https://connectedcirclescommunity.com/resources.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/resources.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/resources.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/resources.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/directory.html</loc>
+    <loc>https://connectedcirclescommunity.com/directory.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/directory.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/directory.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/directory.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/directory.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/directory.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/directory.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/blog.html</loc>
+    <loc>https://connectedcirclescommunity.com/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/blog.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/blog/you-left-and-you-came-back.html</loc>
+    <loc>https://connectedcirclescommunity.com/blog/you-left-and-you-came-back.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/blog/the-fifteenth-time.html</loc>
+    <loc>https://connectedcirclescommunity.com/blog/the-fifteenth-time.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/blog/what-a-yes-space-is.html</loc>
+    <loc>https://connectedcirclescommunity.com/blog/what-a-yes-space-is.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/subscribe.html</loc>
+    <loc>https://connectedcirclescommunity.com/subscribe.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/subscribe.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/subscribe.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/subscribe.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/subscribe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/subscribe.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/subscribe.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/contact.html</loc>
+    <loc>https://connectedcirclescommunity.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/contact.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/glossary.html</loc>
+    <loc>https://connectedcirclescommunity.com/glossary.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/glossary.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/</loc>
+    <loc>https://connectedcirclescommunity.com/es/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/contact.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/contact.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/about.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/about.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/about.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/services.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/services.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/services.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/services.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/services.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/subscribe.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/subscribe.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/subscribe.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/subscribe.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/subscribe.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/subscribe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/subscribe.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/subscribe.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/workshops.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/workshops.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/workshops.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/workshops.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/workshops.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/team.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/team.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/team.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/team.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/team.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/team.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/team.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/team.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/bears.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/bears.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/bears.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/bears.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/bears.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/bears.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/bears.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/bears.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/training.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/training.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/training.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/training.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/training.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/training.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/training.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/frameworks.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/frameworks.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/frameworks.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/frameworks.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/frameworks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/frameworks.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/frameworks.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/frameworks.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/directory.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/directory.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/directory.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/directory.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/directory.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/directory.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/directory.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/directory.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/blog.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/blog.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/resources.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/resources.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/resources.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/resources.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/resources.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/glossary.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/glossary.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcirclescommunity.com/glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcirclescommunity.com/es/glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcirclescommunity.com/glossary.html"/>
   </url>
   <url>
-    <loc>https://connectedcircles.netlify.app/es/blog/estar-con.html</loc>
+    <loc>https://connectedcirclescommunity.com/es/blog/estar-con.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

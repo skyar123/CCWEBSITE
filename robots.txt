@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /.netlify/
 
-Sitemap: https://connectedcircles.netlify.app/sitemap.xml
+Sitemap: https://connectedcirclescommunity.com/sitemap.xml
