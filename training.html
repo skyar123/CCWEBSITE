@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Autism Training | ConnectEd Circles</title>
   <meta name="description" content="Autism: It Just Makes Sense!  -  A hands-on professional development training in Shoebox Activities, TEACCH, DIR/Floortime, and emotionally responsive practice for early childhood educators.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap">
   <link rel="stylesheet" href="style.css">
+  <noscript><style>.anim{opacity:1;transform:none}</style></noscript>
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="canonical" href="https://connectedcircles.netlify.app/training.html">
   <link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/training.html">
   <link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/training.html">
@@ -27,7 +32,7 @@
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="nav" role="navigation" aria-label="Main"><div class="nav-inner"><a href="index.html" class="nav-logo"><img src="images/logo-icon.svg" alt="ConnectEd Circles logo"><span class="nav-logo-text">Connect<span>Ed</span> Circles</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Field Notes</a></li><li><a href="resources.html">Resources</a></li><li><a href="subscribe.html">Subscribe</a></li><li><a href="es/training.html" class="nav-lang">Español</a></li><li><a href="contact.html" class="btn btn-nav-cta">Book a Consultation</a></li></ul></div></nav>
+  <nav class="nav" role="navigation" aria-label="Main"><div class="nav-inner"><a href="index.html" class="nav-logo"><img src="images/logo-icon.svg" alt="ConnectEd Circles logo"><span class="nav-logo-text">Connect<span>Ed</span> Circles</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Field Notes</a></li><li><a href="resources.html">Resources</a></li><li><a href="subscribe.html">Subscribe</a></li><li><a href="es/training.html" class="nav-lang">Español</a></li><li><a href="contact.html" class="btn btn-nav-cta">Book a Consultation</a></li></ul></div></nav>
 
   <section class="page-hero" id="main-content">
     <div class="container">
@@ -150,8 +155,15 @@
         <span class="training-badge">Limited to 25 Participants</span>
         <span class="training-badge" style="margin-left:8px;background:var(--sage-100);color:var(--sage-800);">Available in EN / ES</span>
       </div>
-      <p style="font-size:0.9rem;color:var(--neutral-500);">To inquire about upcoming training dates, request a private cohort for your organization, or ask questions about the curriculum, reach out below.</p>
-      <a href="contact.html" class="btn btn-primary" style="margin-top:12px;">Inquire About Registration <span class="arrow">&rarr;</span></a>
+      <p style="font-size:0.9rem;color:var(--neutral-500);">Dates are announced to the waitlist first. Leave your email and we&rsquo;ll let you know when the next cohort opens&mdash;no commitment.</p>
+      <form name="training-waitlist" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" style="max-width:440px;margin:20px auto 0;text-align:left;">
+        <p class="sr-only"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+        <div class="form-group"><label for="wl-name">Your Name *</label><input type="text" id="wl-name" name="name" required placeholder="Full name"></div>
+        <div class="form-group"><label for="wl-email">Email Address *</label><input type="email" id="wl-email" name="email" required placeholder="name@example.org" autocomplete="email"></div>
+        <div class="form-group"><label for="wl-org">Organization <span style="font-weight:400;color:var(--neutral-400);">(optional)</span></label><input type="text" id="wl-org" name="organization" placeholder="School, center, or agency"></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Join the Waitlist <span class="arrow">&rarr;</span></button>
+        <p style="font-size:0.78rem;color:var(--neutral-500);margin-top:10px;text-align:center;">Questions, or want a private cohort for your organization? <a href="contact.html" style="font-weight:600;">Contact us</a>.</p>
+      </form>
     </div>
   </section>
 

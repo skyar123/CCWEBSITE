@@ -240,4 +240,9 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/glossary.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/glossary.html"/>
   </url>
+  <url>
+    <loc>https://connectedcircles.netlify.app/es/blog/estar-con.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

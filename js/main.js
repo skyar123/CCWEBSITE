@@ -124,6 +124,40 @@
     });
   });
 
+  // ── Spanish-language suggestion banner ──
+  // Shown once to Spanish-preferring browsers on English pages, linking to
+  // this page's Spanish twin (taken from the nav language switcher).
+  (function () {
+    if (document.documentElement.lang !== 'en') return;
+    var dismissed;
+    try { dismissed = localStorage.getItem('cc-lang-banner'); } catch (e) { dismissed = '1'; }
+    if (dismissed) return;
+    var langs = navigator.languages || [navigator.language || ''];
+    var prefersSpanish = langs.some(function (l) { return /^es\b/i.test(l); });
+    if (!prefersSpanish) return;
+    var esLink = document.querySelector('.nav-lang');
+    if (!esLink) return;
+
+    var banner = document.createElement('div');
+    banner.className = 'lang-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Sugerencia de idioma');
+    banner.innerHTML =
+      '<p>¿Prefiere leer en español? Esta página está disponible en español.</p>' +
+      '<a class="btn" href="' + esLink.getAttribute('href') + '">Ver en español <span class="arrow">&rarr;</span></a>' +
+      '<button type="button" class="lang-banner-close" aria-label="Cerrar">&times;</button>';
+    document.body.appendChild(banner);
+
+    function dismiss() {
+      banner.remove();
+      try { localStorage.setItem('cc-lang-banner', '1'); } catch (e) {}
+    }
+    banner.querySelector('.lang-banner-close').addEventListener('click', dismiss);
+    banner.querySelector('a.btn').addEventListener('click', function () {
+      try { localStorage.setItem('cc-lang-banner', '1'); } catch (e) {}
+    });
+  })();
+
   // ── Nav background on scroll ──
   var nav = document.querySelector('.nav');
   if (nav) {

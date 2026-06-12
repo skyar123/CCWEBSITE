@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estar Con | ConnectEd Circles</title>
+  <meta name="description" content="Sobre el berrinche en el pasillo del cereal, los sentimientos que no se pueden arreglar, y la postura que lo cambia todo. Un ensayo en español del equipo de ConnectEd Circles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap">
+  <link rel="stylesheet" href="../../style.css">
+  <noscript><style>.anim{opacity:1;transform:none}</style></noscript>
+  <link rel="icon" href="../../images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+  <style>
+    .post-article { max-width:760px; margin:0 auto; }
+    .post-article h2 { margin-top:40px; margin-bottom:16px; font-size:1.35rem; }
+    .post-article p { color:var(--neutral-600); line-height:1.75; margin-bottom:18px; }
+    .post-article blockquote { border-left:3px solid var(--sage-300); margin:28px 0; padding:16px 24px; background:var(--sage-50); border-radius:0 var(--r-md) var(--r-md) 0; }
+    .post-article blockquote p { margin:0; font-style:italic; color:var(--neutral-500); }
+
+    .essay-hero-wrap { background:#2d4a32; color:#fefdfb; border-radius:var(--r-lg) var(--r-lg) 0 0; position:relative; overflow:hidden; padding:44px 44px 48px; }
+    .essay-hero-wrap .seed { position:absolute; top:-48px; right:-48px; width:260px; height:260px; opacity:0.14; pointer-events:none; color:#fefdfb; }
+    .essay-hero-wrap .seed svg { width:100%; height:100%; }
+    .essay-hero-meta { font-family:var(--font-body); font-size:0.74rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.72); margin-bottom:22px; position:relative; }
+    .essay-hero-meta::before { content:'— '; color:var(--terra-400); }
+    .essay-hero-label { font-family:var(--font-body); font-size:0.74rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:6px; position:relative; }
+    .essay-hero-date { font-family:var(--font-display); font-size:1.7rem; font-weight:400; color:#fff; line-height:1.2; position:relative; }
+    .essay-stripe { display:flex; height:5px; }
+    .essay-stripe span { flex:1; display:block; }
+    .essay-stripe .s-terra { background:var(--terra-500); }
+    .essay-stripe .s-sage { background:var(--sage-700); }
+    .essay-stripe .s-lav { background:var(--lav-500); }
+    .essay-body { background:var(--cream); padding:44px 44px 36px; border-radius:0 0 var(--r-lg) var(--r-lg); margin-bottom:40px; }
+    .essay-body h1 { font-size:clamp(1.9rem, 4vw, 2.6rem); line-height:1.15; margin-bottom:14px; font-weight:400; letter-spacing:-0.015em; }
+    .essay-body h1 em { font-style:italic; color:var(--sage-700); font-weight:400; }
+    .essay-body .essay-kicker { font-family:var(--font-display); font-style:italic; font-weight:400; font-size:1.1rem; color:var(--sage-700); margin-bottom:22px; line-height:1.4; }
+    .essay-body .essay-byline { font-family:var(--font-body); font-size:0.78rem; font-weight:600; letter-spacing:0.08em; color:var(--neutral-500); text-transform:uppercase; padding-top:18px; border-top:1px solid var(--neutral-200); }
+    .essay-body .essay-byline::before { content:'— '; color:var(--terra-500); }
+    .essay-body .essay-lede { font-size:1.08rem; color:var(--neutral-600); line-height:1.7; margin-top:22px; margin-bottom:0; }
+
+    .post-pull { background:var(--sage-50); border-radius:var(--r-lg); padding:48px 36px 40px; text-align:center; margin:48px 0; position:relative; overflow:hidden; font-family:var(--font-display); font-style:italic; font-weight:400; font-size:1.3rem; line-height:1.55; color:var(--neutral-800); border:none; }
+    .post-pull::before { content:'\201C\201C'; display:block; color:var(--terra-500); font-size:2.2rem; line-height:1; letter-spacing:-0.12em; margin-bottom:18px; font-style:normal; font-weight:600; font-family:var(--font-display); }
+    .post-pull::after { content:''; display:block; width:44px; height:2px; background:var(--sage-500); margin:22px auto 0; }
+
+    .post-further { background:var(--sage-50); border-radius:var(--r-lg); padding:24px 28px; margin-top:40px; }
+    .post-further h3 { margin-top:0; color:var(--sage-800); font-size:1rem; letter-spacing:0.04em; text-transform:uppercase; font-family:var(--font-body); font-weight:700; }
+    .post-further ul { list-style:none; padding:0; margin:12px 0 0; }
+    .post-further li { font-size:0.9rem; color:var(--neutral-600); line-height:1.65; padding:8px 0; border-bottom:1px solid var(--sage-100); }
+    .post-further li:last-child { border-bottom:none; }
+
+    .essay-tagbar { background:var(--lav-500); color:#fff; padding:16px 20px; text-align:center; font-family:var(--font-body); font-size:0.78rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; border-radius:var(--r-md); margin-top:48px; }
+
+    .post-author { display:flex; align-items:center; gap:16px; padding:24px; background:var(--sage-50); border-radius:var(--r-lg); margin-top:20px; }
+    .post-author img { width:56px; height:56px; border-radius:50%; object-fit:cover; }
+    .post-author-info strong { display:block; font-size:0.95rem; margin-bottom:2px; }
+    .post-author-info span { font-size:0.83rem; color:var(--neutral-500); }
+    .back-link { display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; font-weight:600; color:var(--sage-700); text-decoration:none; margin-bottom:32px; }
+    .back-link:hover { color:var(--sage-900); }
+    .subscribe-inline { background:#2d4a32; color:var(--white); border-radius:var(--r-xl); padding:40px; text-align:center; margin-top:56px; position:relative; overflow:hidden; }
+    .subscribe-inline h3 { color:var(--white); margin-bottom:8px; }
+    .subscribe-inline p { color:rgba(255,255,255,0.7); font-size:0.9rem; margin-bottom:24px; }
+
+    @media (max-width:640px) {
+      .essay-hero-wrap { padding:32px 24px 36px; }
+      .essay-hero-wrap .seed { width:180px; height:180px; top:-30px; right:-30px; }
+      .essay-body { padding:32px 24px 24px; }
+    }
+  </style>
+  <link rel="canonical" href="https://connectedcircles.netlify.app/es/blog/estar-con.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ConnectEd Circles">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Estar Con | ConnectEd Circles">
+  <meta property="og:description" content="Sobre el berrinche en el pasillo del cereal, los sentimientos que no se pueden arreglar, y la postura que lo cambia todo.">
+  <meta property="og:url" content="https://connectedcircles.netlify.app/es/blog/estar-con.html">
+  <meta property="og:image" content="https://connectedcircles.netlify.app/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Estar Con">
+  <meta name="twitter:description" content="Sobre los sentimientos que no se pueden arreglar, y la postura que lo cambia todo.">
+  <meta name="twitter:image" content="https://connectedcircles.netlify.app/images/og-image.jpg">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <nav class="nav" role="navigation" aria-label="Navegación principal"><div class="nav-inner"><a href="../index.html" class="nav-logo"><img src="../../images/logo-icon.svg" alt="ConnectEd Circles logo" width="40" height="40"><span class="nav-logo-text">Connect<span>Ed</span> Circles</span></a><button class="nav-toggle" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li><a href="../index.html">Inicio</a></li><li><a href="../about.html">Sobre Nosotros</a></li><li><a href="../services.html">Servicios</a></li><li><a href="../workshops.html">Talleres</a></li><li><a href="../blog.html">Field Notes</a></li><li><a href="../resources.html">Recursos</a></li><li><a href="../subscribe.html">Suscribirse</a></li><li><a href="../../blog.html" class="nav-lang">English</a></li><li><a href="../contact.html" class="btn btn-nav-cta">Contactar</a></li></ul></div></nav>
+
+  <section class="section" id="main-content">
+    <div class="container">
+      <div class="post-article">
+
+        <a href="../blog.html" class="back-link"><span style="font-size:1rem;">&larr;</span> Volver a Field Notes</a>
+
+        <div class="essay-hero-wrap">
+          <div class="seed" aria-hidden="true">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" stroke="currentColor" stroke-width="1" transform="translate(100,100)">
+                <circle cx="0" cy="-35" r="35"/>
+                <circle cx="30.3" cy="-17.5" r="35"/>
+                <circle cx="30.3" cy="17.5" r="35"/>
+                <circle cx="0" cy="35" r="35"/>
+                <circle cx="-30.3" cy="17.5" r="35"/>
+                <circle cx="-30.3" cy="-17.5" r="35"/>
+                <circle cx="0" cy="0" r="20"/>
+              </g>
+            </svg>
+          </div>
+          <div class="essay-hero-meta">Asheville y el Oeste de Carolina del Norte</div>
+          <div class="essay-hero-label">Field Notes &middot; Ensayo en Español</div>
+          <div class="essay-hero-date">Sobre quedarse cerca</div>
+        </div>
+        <div class="essay-stripe" aria-hidden="true">
+          <span class="s-terra"></span>
+          <span class="s-sage"></span>
+          <span class="s-lav"></span>
+        </div>
+        <div class="essay-body">
+          <h1>Estar <em>Con</em></h1>
+          <div class="essay-kicker">Sobre el berrinche en el pasillo del cereal, los sentimientos que no se pueden arreglar, y la postura que lo cambia todo</div>
+          <div class="essay-byline">El equipo de ConnectEd Circles &middot; Asheville, NC</div>
+          <p class="essay-lede">Usted conoce el momento. El supermercado, el pasillo del cereal, la caja equivocada &mdash; o la caja correcta pero en la mano equivocada. El cuerpo pequeño que se deja caer al suelo. El sonido que hace que todos los demás adultos del pasillo volteen a mirar. Y usted, parada ahí, con las manos vacías y el corazón a mil, sabiendo una sola cosa con certeza: esto no se puede arreglar.</p>
+        </div>
+
+        <p>Esa certeza es correcta. Y es exactamente el punto de partida.</p>
+
+        <p>En nuestro trabajo regresamos una y otra vez a una frase que viene de Lesley Koplow y del Centro de Prácticas Emocionalmente Responsivas de Bank Street: <em>Being With</em>. En español la decimos así: <strong>Estar Con</strong>. No nombra una técnica. Nombra una postura &mdash; lo que hace un adulto cuando un niño está teniendo un sentimiento que el adulto no puede arreglar.</p>
+
+        <h2>Lo que Estar Con no es</h2>
+
+        <p>Estar Con no es narrar el sentimiento desde afuera, como locutora de un partido que el niño está perdiendo. No es actuar una calma que usted no tiene &mdash; los niños detectan la calma fingida con la precisión de un sismógrafo. No es distraer, ni negociar, ni apurar al niño hacia el siguiente sentimiento porque el actual le resulta incómodo a usted.</p>
+
+        <p>Y no es permitirlo todo. Estar Con un sentimiento no significa decir que sí a la caja de cereal. El límite se queda. Lo que cambia es lo que pasa <em>dentro</em> del límite: usted se queda también.</p>
+
+        <blockquote>
+          <p>El niño no necesita que usted resuelva el sentimiento. Necesita que usted lo sobreviva con él, para que pueda aprender que los sentimientos se pueden sobrevivir.</p>
+        </blockquote>
+
+        <h2>Lo que sí es</h2>
+
+        <p>Es quedarse cerca. Quedarse en silencio, o casi. Dejar que su cuerpo sea la cosa firme en el pasillo mientras el cuerpo del niño hace lo que necesita hacer. Si hay palabras, son pocas y son éstas: <em>Estoy aquí. Veo esto. No me voy a ninguna parte.</em></p>
+
+        <p>La ciencia detrás de esta postura tiene nombre: corregulación. Un sistema nervioso pequeño y desbordado se organiza tomando prestada la organización de un sistema nervioso más grande y más firme. No tomándola prestada de las palabras del adulto &mdash; de su <em>estado</em>. Por eso la calma fingida no funciona y la presencia honesta sí: el niño no está escuchando lo que usted dice. Está leyendo lo que usted es, en ese momento, a medio metro de distancia.</p>
+
+        <p>Esto también explica por qué Estar Con cansa. Usted está prestando su regulación, y lo prestado cuesta. Si al final del día siente que no le queda nada, no es señal de que lo está haciendo mal. Es señal de que lo está haciendo. Y es la razón por la que las personas que cuidan a niños pequeños necesitan, a su vez, alguien que esté con ellas &mdash; una directora, una colega, una supervisora que pueda ofrecer a la adulta lo que la adulta ofrece al niño. En nuestro campo lo llamamos el proceso paralelo. En la vida real se llama no estar sola.</p>
+
+        <h2>El pasillo del cereal, otra vez</h2>
+
+        <p>Entonces: el supermercado. El cuerpo pequeño en el suelo. Los adultos que miran.</p>
+
+        <p>Usted no tiene que arreglar nada. Puede bajar a la altura del niño, o quedarse de pie y cerca. Puede poner una mano donde el niño pueda encontrarla si la quiere. Puede decir poco: <em>Estoy aquí. Querías la caja. Es difícil.</em> Puede dejar que la ola pase, porque las olas pasan &mdash; todas, siempre &mdash; y lo que el niño recuerda después no es la caja de cereal. Es quién estaba ahí cuando la ola pasó.</p>
+
+        <p>Los demás adultos del pasillo van a pensar lo que van a pensar. Algunos &mdash; los que han estado ahí &mdash; van a reconocer exactamente lo que están viendo: no una madre que perdió el control de su hijo, sino una madre haciendo el trabajo más viejo y más difícil que existe. Quedarse.</p>
+
+        <div class="post-pull">Todo lo demás &mdash; el lenguaje, el marco, la intervención &mdash; es andamiaje para este único movimiento: quedarse cerca mientras el sentimiento atraviesa.</div>
+
+        <div class="post-further">
+          <h3>Para seguir leyendo</h3>
+          <ul>
+            <li>Koplow, Lesley. <em>Unsmiling Faces: How Preschools Can Heal.</em> Teachers College Press, 2007.</li>
+            <li>Nuestra entrada de glosario: <a href="../glossary.html#being-with">Estar Con (Being With)</a> &mdash; en lenguaje sencillo, en español.</li>
+            <li>Delahooke, Mona. <em>Más allá de las conductas.</em> Disponible en español.</li>
+            <li>Siegel, Daniel y Tina Payne Bryson. <em>El poder de la presencia.</em> Disponible en español.</li>
+          </ul>
+        </div>
+
+        <div class="essay-tagbar">Asheville y el Oeste de NC</div>
+
+        <div class="post-author">
+          <img src="../../images/logo-icon.svg" alt="ConnectEd Circles" style="background:var(--sage-50);">
+          <div class="post-author-info">
+            <strong>El equipo de ConnectEd Circles</strong>
+            <span>Escrito por nuestro equipo bilingüe &nbsp;&middot;&nbsp; Asheville, NC</span>
+          </div>
+        </div>
+
+        <div class="subscribe-inline">
+          <h3>Reciba nuevos ensayos en su correo</h3>
+          <p>Reflexiones clínicas, herramientas prácticas y pensamiento honesto del equipo de ConnectEd Circles.</p>
+          <div style="max-width:480px;margin:0 auto;">
+            <iframe src="https://connectedcircles.substack.com/embed" width="480" height="150" style="width:100%;max-width:480px;background:white;border:1px solid var(--sage-200);border-radius:var(--r-md);" frameborder="0" scrolling="no" title="Suscribirse a Field Notes" loading="lazy"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta"><div class="container"><h2>¿Quiere explorar este trabajo con nosotras?</h2><p>Ofrecemos consulta reflexiva, desarrollo profesional y coaching basados en el apego, el desarrollo y la práctica cotidiana &mdash; en español y en inglés.</p><a href="../contact.html" class="btn btn-white">Contáctenos <span class="arrow">&rarr;</span></a></div></section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand">Connect<span>Ed</span> Circles</div><p class="footer-desc">Coaching reflexivo, desarrollo profesional y apoyo familiar basado en relaciones.</p></div><div><h3 class="footer-heading">Navegar</h3><ul class="footer-links"><li><a href="../about.html">Sobre Nosotros</a></li><li><a href="../team.html">Equipo</a></li><li><a href="../blog.html">Field Notes</a></li><li><a href="../resources.html">Biblioteca de Recursos</a></li><li><a href="../subscribe.html">Suscribirse</a></li><li><a href="../contact.html">Contactar</a></li></ul></div><div><h3 class="footer-heading">Explorar</h3><ul class="footer-links"><li><a href="../workshops.html">Talleres</a></li><li><a href="../services.html">Servicios</a></li><li><a href="../frameworks.html">Marcos Teóricos</a></li><li><a href="../glossary.html">Glosario</a></li><li><a href="../training.html">Capacitación de Autismo</a></li><li><a href="../directory.html">Directorio WNC</a></li></ul></div><div><h3 class="footer-heading">Conectar</h3><ul class="footer-links"><li><a href="https://www.instagram.com/connectedcirclescommunity" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:info@connectedcirclescommunity.com">Email</a></li><li><a href="../blog.html">Field Notes</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 ConnectEd Circles, LLC.</p><p>Asheville, NC</p></div></div></footer>
+  <script src="../../js/main.js"></script>
+</body>
+</html>
