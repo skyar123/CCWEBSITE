@@ -245,33 +245,4 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://connectedcircles.netlify.app/es/blog.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/blog.html"/>
-  </url>
-  <url>
-    <loc>https://connectedcircles.netlify.app/es/resources.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/resources.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/resources.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/resources.html"/>
-  </url>
-  <url>
-    <loc>https://connectedcircles.netlify.app/es/glossary.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://connectedcircles.netlify.app/glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://connectedcircles.netlify.app/es/glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://connectedcircles.netlify.app/glossary.html"/>
-  </url>
-  <url>
-    <loc>https://connectedcircles.netlify.app/es/blog/estar-con.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
