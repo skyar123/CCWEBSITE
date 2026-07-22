@@ -1,3 +1,16 @@
+# Repo structure — what gets published
+
+**Only the `site/` folder is deployed to the live website** (see `netlify.toml`,
+`publish = "site"`). Everything else at the repo root — `drafts/`, `project/`,
+`chats/`, `Library/`, this README — is private working material and is never
+served on the site. Anything you want published goes in `site/`; anything you
+don't, stays outside it.
+
+> ⚠️ If this repo is public on GitHub, the working folders are still visible
+> there. Keep the repo **private** (GitHub → Settings → change visibility).
+
+---
+
 # CODING AGENTS: READ THIS FIRST
 
 This is a **handoff bundle** from Claude Design (claude.ai/design).

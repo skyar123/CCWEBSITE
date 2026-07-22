@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Left and You Came Back | ConnectEd Circles</title>
+  <meta name="description" content="On peek-a-boo, object permanence, and practiced trust. An essay by Skylar Belt on how the disappearance-and-reappearance ritual is the first rehearsal for the drop-off, the separation, and the reliable return.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <noscript><style>.anim{opacity:1;transform:none}</style></noscript>
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <style>
+    .post-article { max-width:760px; margin:0 auto; }
+    .post-article h2 { margin-top:40px; margin-bottom:16px; font-size:1.35rem; }
+    .post-article h3 { margin-top:32px; margin-bottom:12px; font-size:1.1rem; color:var(--sage-800); }
+    .post-article p { color:var(--neutral-600); line-height:1.75; margin-bottom:18px; }
+    .post-article blockquote { border-left:3px solid var(--sage-300); margin:28px 0; padding:16px 24px; background:var(--sage-50); border-radius:0 var(--r-md) var(--r-md) 0; }
+    .post-article blockquote p { margin:0; font-style:italic; color:var(--neutral-500); }
+
+    /* Brand design kit — essay hero block */
+    .essay-hero-wrap { background:#2d4a32; color:#fefdfb; border-radius:var(--r-lg) var(--r-lg) 0 0; position:relative; overflow:hidden; padding:44px 44px 48px; }
+    .essay-hero-wrap .seed { position:absolute; top:-48px; right:-48px; width:260px; height:260px; opacity:0.14; pointer-events:none; color:#fefdfb; }
+    .essay-hero-wrap .seed svg { width:100%; height:100%; }
+    .essay-hero-meta { font-family:var(--font-body); font-size:0.74rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.72); margin-bottom:22px; position:relative; }
+    .essay-hero-meta::before { content:'— '; color:var(--terra-400); }
+    .essay-hero-label { font-family:var(--font-body); font-size:0.74rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:6px; position:relative; }
+    .essay-hero-date { font-family:var(--font-display); font-size:1.7rem; font-weight:400; color:#fff; line-height:1.2; position:relative; }
+    .essay-stripe { display:flex; height:5px; }
+    .essay-stripe span { flex:1; display:block; }
+    .essay-stripe .s-terra { background:var(--terra-500); }
+    .essay-stripe .s-sage { background:var(--sage-700); }
+    .essay-stripe .s-lav { background:var(--lav-500); }
+    .essay-body { background:var(--cream); padding:44px 44px 36px; border-radius:0 0 var(--r-lg) var(--r-lg); margin-bottom:40px; }
+    .essay-body h1 { font-size:clamp(1.9rem, 4vw, 2.6rem); line-height:1.15; margin-bottom:14px; font-weight:400; letter-spacing:-0.015em; }
+    .essay-body h1 em { font-style:italic; color:var(--sage-700); font-weight:400; }
+    .essay-body .essay-kicker { font-family:var(--font-display); font-style:italic; font-weight:400; font-size:1.1rem; color:var(--sage-700); margin-bottom:22px; line-height:1.4; }
+    .essay-body .essay-byline { font-family:var(--font-body); font-size:0.78rem; font-weight:600; letter-spacing:0.08em; color:var(--neutral-500); text-transform:uppercase; padding-top:18px; border-top:1px solid var(--neutral-200); }
+    .essay-body .essay-byline::before { content:'— '; color:var(--terra-500); }
+    .essay-body .essay-lede { font-size:1.08rem; color:var(--neutral-600); line-height:1.7; margin-top:22px; margin-bottom:0; }
+
+    /* Pull quote — quote-card treatment from the brand kit */
+    .post-pull { background:var(--sage-50); border-radius:var(--r-lg); padding:48px 36px 40px; text-align:center; margin:48px 0; position:relative; overflow:hidden; font-family:var(--font-display); font-style:italic; font-weight:400; font-size:1.3rem; line-height:1.55; color:var(--neutral-800); border:none; }
+    .post-pull::before { content:'\201C\201C'; display:block; color:var(--terra-500); font-size:2.2rem; line-height:1; letter-spacing:-0.12em; margin-bottom:18px; font-style:normal; font-weight:600; font-family:var(--font-display); }
+    .post-pull::after { content:''; display:block; width:44px; height:2px; background:var(--sage-500); margin:22px auto 0; }
+
+    .post-further { background:var(--sage-50); border-radius:var(--r-lg); padding:24px 28px; margin-top:40px; }
+    .post-further h3 { margin-top:0; color:var(--sage-800); font-size:1rem; letter-spacing:0.04em; text-transform:uppercase; font-family:var(--font-body); font-weight:700; }
+    .post-further ul { list-style:none; padding:0; margin:12px 0 0; }
+    .post-further li { font-size:0.9rem; color:var(--neutral-600); line-height:1.65; padding:8px 0; border-bottom:1px solid var(--sage-100); }
+    .post-further li:last-child { border-bottom:none; }
+
+    /* Lavender tag bar — from the kit's Quote Story card */
+    .essay-tagbar { background:var(--lav-500); color:#fff; padding:16px 20px; text-align:center; font-family:var(--font-body); font-size:0.78rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; border-radius:var(--r-md); margin-top:48px; }
+
+    .post-author { display:flex; align-items:center; gap:16px; padding:24px; background:var(--sage-50); border-radius:var(--r-lg); margin-top:20px; }
+    .post-author img { width:56px; height:56px; border-radius:50%; object-fit:cover; }
+    .post-author-info strong { display:block; font-size:0.95rem; margin-bottom:2px; }
+    .post-author-info span { font-size:0.83rem; color:var(--neutral-500); }
+    .back-link { display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; font-weight:600; color:var(--sage-700); text-decoration:none; margin-bottom:32px; }
+    .back-link:hover { color:var(--sage-900); }
+    .subscribe-inline { background:#2d4a32; color:var(--white); border-radius:var(--r-xl); padding:40px; text-align:center; margin-top:56px; position:relative; overflow:hidden; }
+    .subscribe-inline h3 { color:var(--white); margin-bottom:8px; }
+    .subscribe-inline p { color:rgba(255,255,255,0.7); font-size:0.9rem; margin-bottom:24px; }
+
+    @media (max-width:640px) {
+      .essay-hero-wrap { padding:32px 24px 36px; }
+      .essay-hero-wrap .seed { width:180px; height:180px; top:-30px; right:-30px; }
+      .essay-body { padding:32px 24px 24px; }
+    }
+  </style>
+  <link rel="canonical" href="https://connectedcirclescommunity.com/blog/you-left-and-you-came-back.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ConnectEd Circles">
+  <meta property="og:title" content="You Left and You Came Back | ConnectEd Circles">
+  <meta property="og:description" content="On peek-a-boo, object permanence, and practiced trust. An essay by Skylar Belt.">
+  <meta property="og:url" content="https://connectedcirclescommunity.com/blog/you-left-and-you-came-back.html">
+  <meta property="og:image" content="https://connectedcirclescommunity.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="You Left and You Came Back">
+  <meta name="twitter:description" content="On peek-a-boo, object permanence, and practiced trust.">
+  <meta name="twitter:image" content="https://connectedcirclescommunity.com/images/og-image.jpg">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main"><div class="nav-inner"><a href="../index.html" class="nav-logo"><img src="../images/logo-icon.svg" alt="ConnectEd Circles logo"><span class="nav-logo-text">Connect<span>Ed</span> Circles</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="../workshops.html">Workshops</a></li><li><a href="../blog.html" class="active">Field Notes</a></li><li><a href="../resources.html">Resources</a></li><li><a href="../subscribe.html">Subscribe</a></li><li><a href="../es/blog.html" class="nav-lang">Español</a></li><li><a href="../contact.html" class="btn btn-nav-cta">Book a Consultation</a></li></ul></div></nav>
+
+  <section class="section" id="main-content">
+    <div class="container">
+      <div class="post-article">
+
+        <a href="../resources.html" class="back-link"><span style="font-size:1rem;">&larr;</span> Back to Resources</a>
+
+        <div class="essay-hero-wrap">
+          <div class="seed" aria-hidden="true">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" stroke="currentColor" stroke-width="1" transform="translate(100,100)">
+                <circle cx="0" cy="-35" r="35"/>
+                <circle cx="30.3" cy="-17.5" r="35"/>
+                <circle cx="30.3" cy="17.5" r="35"/>
+                <circle cx="0" cy="35" r="35"/>
+                <circle cx="-30.3" cy="17.5" r="35"/>
+                <circle cx="-30.3" cy="-17.5" r="35"/>
+                <circle cx="0" cy="0" r="20"/>
+              </g>
+            </svg>
+          </div>
+          <div class="essay-hero-meta">Asheville &amp; Western North Carolina</div>
+          <div class="essay-hero-label">Field Notes &middot; Essay</div>
+          <div class="essay-hero-date">On Practiced Trust</div>
+        </div>
+        <div class="essay-stripe" aria-hidden="true">
+          <span class="s-terra"></span>
+          <span class="s-sage"></span>
+          <span class="s-lav"></span>
+        </div>
+        <div class="essay-body">
+          <h1>You Left and You <em>Came Back</em></h1>
+          <div class="essay-kicker">On peek-a-boo, object permanence, and practiced trust</div>
+          <div class="essay-byline">Skylar Belt &middot; Co-founder, ConnectEd Circles &middot; Asheville, NC</div>
+          <p class="essay-lede">Peek-a-boo is an odd little ritual when you step back from it. A face appears, disappears behind hands, appears again. A person walks behind a doorframe and comes back. A parent ducks behind a blanket and pops up on the other side. The child laughs every time. Not sometimes. Every time. And then asks for it again.</p>
+        </div>
+
+        <p>That laughter has been studied. That insistence has been studied. And what developmental science has found inside of it is more interesting than the name of the game suggests.</p>
+
+        <p>Peek-a-boo is practice. Specifically, it is practiced trust.</p>
+
+
+        <h2>What object permanence actually is</h2>
+
+        <p>Jean Piaget &mdash; the Swiss psychologist who first gave this concept its name and spent his career studying how children come to understand the world &mdash; described object permanence as one of the most important achievements of the first two years of life. Before it develops, a child has no cognitive framework for an object that is out of sight. Out of sight is, functionally, out of existence. The toy covered by the blanket is not a covered toy. It is simply gone.</p>
+
+        <p>Piaget believed this shift happened around eight months. More recent research has pushed that estimate earlier, with some studies suggesting infants show early signs of the concept between four and seven months. But the timeline is less important than the mechanics: object permanence is not a switch that flips. It is a capacity that develops gradually, inside of experience, built from the repeated discovery that things &mdash; and people &mdash; continue to exist even when they cannot be perceived.</p>
+
+        <p>Games like peek-a-boo and blanket-hiding games are not enrichment activities. They are practice. The child doing peek-a-boo is not playing for entertainment &mdash; or not only for entertainment. They are doing what researchers describe as testing a hypothesis: if I cannot see the thing, does it still exist? Is the face still behind those hands? Is the person still behind the corner? And when the face reappears, when the person comes back, the hypothesis is confirmed. They are still there. The thing is still real.</p>
+
+        <p>Piaget noted that infants willing to play hide-and-seek and peek-a-boo at length are doing so precisely because the disappearance-and-reappearance confirms something their minds are actively working to know. The motivation is not whimsy. It is the brain doing exactly what it is supposed to do.</p>
+
+        <blockquote>
+          <p>The child is not asking: isn&rsquo;t this a fun game? The child is asking: are you still real when I can&rsquo;t see you? Each time the answer is yes, something is built.</p>
+        </blockquote>
+
+        <h2>Why it is an attachment story, not just a cognitive one</h2>
+
+        <p>Object permanence gets filed under cognitive development, which is accurate. It is also filed there in a way that separates it from attachment, which is incomplete.</p>
+
+        <p>The critical thing about peek-a-boo is that the object disappearing and reappearing is not a toy. It is the person. The face behind the hands, the adult who walked out of sight, the parent who goes behind the doorframe &mdash; these are not the same category of object as a covered ball. The discovery that a ball still exists under a blanket is developmental. The discovery that <em>you</em> still exist when I cannot see you is developmental and relational and, in the deepest sense, the foundation of trust.</p>
+
+        <p>D. W. Winnicott &mdash; the British pediatrician and psychoanalyst whose thinking we draw on often in this work &mdash; wrote extensively about what he called the &ldquo;holding environment&rdquo;: the physical and emotional space a consistent caregiver creates around an infant. Holding, for Winnicott, was not primarily about being held. It was about reliability. The caregiver who shows up the same way, in the same general shape, over and over &mdash; not perfectly, but consistently &mdash; is creating the conditions in which a child learns that the world is predictable. That people do not simply vanish.</p>
+
+        <p>The Circle of Security framework describes this in terms of the safe haven and the secure base: the caregiver the child can return to when they are frightened, and the caregiver whose presence makes it safe to venture away. Both of those require the same underlying knowledge. You left. You came back. You will do it again. I can count on that.</p>
+
+        <p>Peek-a-boo is the first rehearsal. Blanket forts and hiding games are more advanced versions of the same practice. The drop-off at school is a later version still. The child who trusts the drop-off is the child who has done enough rounds of this particular experiment to carry the answer in their body: the person comes back.</p>
+
+        <h2>On separation anxiety, which is grief doing the right thing</h2>
+
+        <p>One thing worth naming, because it surprises many parents: when object permanence develops, separation anxiety tends to follow. They are not coincidental. A child who did not know you still existed when you left could not miss you. Now they know. Now missing is possible.</p>
+
+        <p>Separation anxiety is not a sign that something has gone wrong. It is a sign that something has gone right. The child has developed the cognitive capacity to hold you in mind and the emotional honesty to communicate what the absence of you costs. That is attachment functioning exactly as it should. The grief is evidence of the love working correctly.</p>
+
+        <p>What helps is not the absence of separation but the predictability of return. The goodbye that is the same shape every time. The &ldquo;I will come back&rdquo; that is always true. The adult who does not sneak out to avoid the tears, but who stays for the goodbye and then goes &mdash; because that going, and that returning, is what teaches the child that the cost of separation is bearable.</p>
+
+        <p>You are not the person who leaves. You are the person who always comes back.</p>
+
+        <p>The goodbye is not the rupture. The reliable return is the repair. And the child learns both from doing it again and again.</p>
+
+        <div class="post-pull">The relationship is the work. Practiced trust &mdash; the leaving, and the coming back &mdash; is how the relationship learns to travel.</div>
+
+        <div class="post-further">
+          <h3>Further reading</h3>
+          <ul>
+            <li>Piaget, Jean. <em>The Construction of Reality in the Child.</em> Basic Books, 1954.</li>
+            <li>Winnicott, D. W. <em>The Child, the Family, and the Outside World.</em> Addison-Wesley, 1964.</li>
+            <li>Cooper, G., Hoffman, K., Powell, B., and Marvin, R. <em>The Circle of Security Intervention.</em> Guilford Press, 2005.</li>
+            <li>Shonkoff, Jack P. &ldquo;Building Babies&rsquo; Brains Through Play.&rdquo; UNICEF Parenting Master Class, 2021.</li>
+          </ul>
+        </div>
+
+        <div class="essay-tagbar">Asheville &amp; Western NC</div>
+
+        <div class="post-author">
+          <img loading="lazy" width="137" height="135" src="../images/skylar.jpg" alt="Skylar Belt">
+          <div class="post-author-info">
+            <strong>Skylar Belt</strong>
+            <span>Co-founder, ConnectEd Circles &nbsp;&middot;&nbsp; Circle of Security Parenting facilitator &nbsp;&middot;&nbsp; Asheville, NC</span>
+          </div>
+        </div>
+
+        <div class="subscribe-inline">
+          <h3>Get new essays in your inbox</h3>
+          <p>Clinical reflections, practical tools, and honest thinking from the ConnectEd Circles team.</p>
+          <div style="max-width:480px;margin:0 auto;">
+            <iframe src="https://connectedcircles.substack.com/embed" width="480" height="150" style="width:100%;max-width:480px;background:white;border:1px solid var(--sage-200);border-radius:var(--r-md);" frameborder="0" scrolling="no" title="Subscribe to Field Notes" loading="lazy"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta"><div class="container"><h2>Want to explore this work with us?</h2><p>We offer reflective consultation, professional development, and coaching grounded in attachment, development, and everyday practice.</p><a href="../contact.html" class="btn btn-white">Get in Touch <span class="arrow">&rarr;</span></a></div></section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand">Connect<span>Ed</span> Circles</div><p class="footer-desc">Reflective coaching, professional development, and family support grounded in relationships.</p></div><div><h3 class="footer-heading">Navigate</h3><ul class="footer-links"><li><a href="../about.html">About Us</a></li><li><a href="../team.html">Meet the Team</a></li><li><a href="../blog.html">Field Notes Blog</a></li><li><a href="../resources.html">Resource Library</a></li><li><a href="../subscribe.html">Subscribe to Field Notes</a></li><li><a href="../contact.html">Contact Us</a></li></ul></div><div><h3 class="footer-heading">Explore</h3><ul class="footer-links"><li><a href="../workshops.html">Workshops</a></li><li><a href="../services.html">Services</a></li><li><a href="../frameworks.html">Our Frameworks</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../training.html">Autism Training</a></li><li><a href="../directory.html">WNC Directory</a></li><li><a href="../es/blog.html">Español</a></li></ul></div><div><h3 class="footer-heading">Connect</h3><ul class="footer-links"><li><a href="https://www.instagram.com/connectedcirclescommunity" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:info@connectedcirclescommunity.com">Email Us</a></li><li><a href="../blog.html">Field Notes Blog</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 ConnectEd Circles, LLC.</p><p>Asheville, NC</p></div></div></footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
